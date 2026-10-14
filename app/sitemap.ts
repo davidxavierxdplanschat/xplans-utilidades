@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';export default function sitemap():MetadataRoute.Sitemap{return ['','/buscar-cep','/conversor','/sobre'].map(path=>({url:(process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000')+path,changeFrequency:'monthly',priority:path?0.8:1}))}
